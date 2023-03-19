@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Search</title>
-    </head>
-    <body>
-        <form action="https://google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>
-    </body>
+  <head>
+    <title>Search</title>
+    <style>
+      .center-block {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .center-block > img {
+        height: 20vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="advanced.html">Advanced Search</a>
+      <a href="images.html">Google Images</a>
+    </div>
+    <div class="center-block">
+      <img src="imgs/Googles_logo.png" />
+      <form action="https://google.com/search">
+        <input type="text" name="q" />
+        <input type="submit" value="Google Search" />
+        <input type="submit" value="Lucky" />
+      </form>
+    </div>
+  </body>
 </html>
