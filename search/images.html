@@ -2,17 +2,161 @@
 <html lang="en">
   <head>
     <title>Search</title>
+    <style>
+      .center-block {
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .center-block > img {
+        height: 15vh;
+      }
+      .sub-btn {
+        display: flex;
+        justify-content: center;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        margin-top: 35px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        width: 35vw;
+        height: 4vh;
+      }
+      .sub-btn {
+        padding: 10px 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        background-color: #dfdfdf;
+        color: #303030;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .sub-btn:last-child {
+        margin-right: 0;
+      }
+      .btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2 px;
+      }
+      .nav ul {
+        list-style: none;
+        margin: 7px;
+        padding: 0;
+        gap: 15px;
+        display: flex;
+        align-items: center;
+      }
+      .nav > ul > li > a {
+        text-decoration: none;
+        color: #303030;
+        font-family: sans-serif;
+        font-size: 1.9ch;
+      }
+      .nav > ul > li > a:hover {
+        text-decoration: underline;
+      }
+      .main {
+        height: 90vh;
+      }
+      /* .nav > a:visited {
+        color: #4285f4;
+      } */
+      #bottom-nav {
+        align-items: end;
+        height: 31vh;
+      }
+    </style>
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
   </head>
   <body>
-    <div>
-      <a href="advanced.html">Advanced Search</a>
-      <a href="index.html">Google Search</a>
+    <div class="nav">
+      <ul>
+        <li><a href="https://mail.google.com/mail/u/0/?ogbl">Gmail</a></li>
+        <li><a href="https://about.google/?fg=1">About</a></li>
+      </ul>
+      <ul>
+        <li><a href="advanced.html">Advanced Search</a></li>
+        <li><a href="index.html">Search</a></li>
+        <li>
+          <a href="https://about.google/products/"
+            ><img
+              style="height: 4vh"
+              src="imgs/google-apps-icon-png-27.jpg"
+              alt=""
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://accounts.google.com/v3/signin/identifier?dsh=S184981178%3A1679500452589605&authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Fpli%3D1&ec=GAlAwAE&hl=en&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession"
+            >Sign in</a
+          >
+        </li>
+      </ul>
     </div>
-    <div>
-      <form action="https://google.com/search">
-        <input type="text" name="q" />
-        <input type="submit" value="Google Search" />
-      </form>
+    <div class="main">
+      <div class="center-block">
+        <img src="imgs/1280px-Google_Images_2015_logo.svg.png" />
+        <form action="https://google.com/search">
+          <input type="text" name="q" placeholder="Search Images" />
+          <div class="btns">
+            <input type="hidden" name="cx" value="your-search-engine-id" />
+            <input type="hidden" name="tbm" value="isch" />
+            <input class="sub-btn" type="submit" value="Google Search" />
+            <input type="hidden" name="btnI" value="1" />
+            <input class="sub-btn" type="submit" value="I'm feeling lucky" />
+          </div>
+        </form>
+        <p style="font-family: sans-serif">
+          google offered in :
+          <a href="#" style="text-decoration: none">العربية</a>
+        </p>
+      </div>
+      <div id="bottom-nav" class="nav">
+        <ul>
+          <li>
+            <a
+              href="https://ads.google.com/intl/en_sa/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&fg=1"
+              >Advertising</a
+            >
+          </li>
+          <li>
+            <a href="https://www.google.com/search/howsearchworks/?fg=1"
+              >How Search Works</a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="https://policies.google.com/privacy?hl=en-SA&fg=1"
+              >Privacy</a
+            >
+          </li>
+          <li>
+            <a href="https://policies.google.com/terms?hl=en-SA&fg=1">terms</a>
+          </li>
+          <li>
+            <a href="https://www.google.com/preferences?hl=en-SA&fg=1"
+              >Settings</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

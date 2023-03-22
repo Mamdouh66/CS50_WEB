@@ -1,21 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Search</title>
+    <title>Google Advanced Search</title>
+    <style>
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2 px;
+      }
+      .nav ul {
+        list-style: none;
+        margin: 7px;
+        padding: 0;
+        gap: 15px;
+        display: flex;
+        align-items: center;
+      }
+      .nav > ul > li > a {
+        text-decoration: none;
+        color: #303030;
+        font-family: sans-serif;
+        font-size: 1.9ch;
+      }
+      .nav > ul > li > a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+      }
+      .sub-btn {
+        padding: 10px 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        background-color: #dfdfdf;
+        color: #303030;
+        margin-right: 10px;
+        margin-left: 175px;
+        cursor: pointer;
+      }
+      .input-btn {
+        border-radius: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        width: 35vw;
+        height: 4vh;
+      }
+      .input-btn:hover {
+        border: 2px solid rgb(88, 135, 210);
+      }
+      .sub-btn:hover {
+        border: 2px solid rgb(88, 135, 210);
+      }
+    </style>
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
   </head>
   <body>
-    <div>
-      <a href="index.html">Google Search</a>
-      <a href="images.html">Google Images</a>
+    <div class="nav">
+      <ul>
+        <li><a href="https://mail.google.com/mail/u/0/?ogbl">Gmail</a></li>
+        <li><a href="https://about.google/?fg=1">About</a></li>
+      </ul>
+      <ul>
+        <li><a href="advanced.html">Advanced Search</a></li>
+        <li><a href="index.html">Search</a></li>
+        <li>
+          <a href="https://about.google/products/"
+            ><img
+              style="height: 4vh"
+              src="imgs/google-apps-icon-png-27.jpg"
+              alt=""
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://accounts.google.com/v3/signin/identifier?dsh=S184981178%3A1679500452589605&authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Fpli%3D1&ec=GAlAwAE&hl=en&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession"
+            >Sign in</a
+          >
+        </li>
+      </ul>
     </div>
-    <div>
-      <form action="https://google.com/search">
-        <input type="text" name="q" />
-        <input type="submit" value="Google Search" />
+    <div class="container">
+      <form action="https://www.google.com/search">
+        <br />
+        <br />
+        <input
+          class="input-btn"
+          type="text"
+          name="as_epq"
+          placeholder="this exact word or phrase"
+        />
+        <br />
+        <br />
+        <input
+          class="input-btn"
+          type="text"
+          name="as_allq"
+          placeholder="All these words"
+        />
+        <br />
+        <br />
+        <input
+          class="input-btn"
+          type="text"
+          name="as_oq"
+          placeholder="Any of these words"
+        />
+        <br />
+        <br />
+        <input
+          class="input-btn"
+          type="text"
+          name="as_eq"
+          placeholder="None of these words"
+        />
+        <br />
+        <br />
+
+        <input class="sub-btn" type="submit" value="Google Search" />
       </form>
-    </div>
-    <div>
-      <input type="submit" value="Lucky" />
     </div>
   </body>
 </html>
